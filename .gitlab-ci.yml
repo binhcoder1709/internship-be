@@ -1,0 +1,33 @@
+stages:
+  - deploy
+
+deploy-job:
+  stage: deploy
+  tags:
+    - LinuxUbuntu
+  image: ubuntu:latest
+  script:
+    - echo "runner connected"
+    - |
+      curl -X POST "https://discord.com/api/v9/channels/1321158292394999840/messages" \
+        -H "Authorization: $DISCORD" \
+        -H "Content-Type: application/json" \
+        -d '{"content": "Server đang được CI/CD deploy "}'
+    - cd /var/www/re_internship_server
+    - . $HOME/.nvm/nvm.sh
+    - nvm use || true
+    - pm2 delete rikkei_sv
+    - git stash
+    - git pull
+    - npm install
+    - npx prisma generate
+    - npm run build
+    - pm2 start dist/main.js --name="rikkei_sv"
+    - |
+      curl -X POST "https://discord.com/api/v9/channels/1321158292394999840/messages" \
+        -H "Authorization: $DISCORD" \
+        -H "Content-Type: application/json" \
+        -d '{"content": "Dự án đã deploy hoàn tất, vui lòng truy cập: https://apirkits.mieusoft.com/api/v1 để kiểm tra"}'
+    - echo "deploy successfully"
+  only:
+    - main

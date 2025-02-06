@@ -1,0 +1,856 @@
+{
+    "schools": [
+      {
+        "name": "Trường Đại học Sư phạm Hà Nội 2",
+        "address": "Vĩnh Phúc"
+      },
+      {
+        "name": "Trường Đại học Luật Thành phố Hồ Chí Minh",
+        "address": "TP.HCM"
+      },
+      {
+        "name": "Trường Đại học Cần Thơ",
+        "address": "Cần Thơ"
+      },
+      {
+        "name": "Trường Đại học Đà Lạt",
+        "address": "Lâm Đồng"
+      },
+      {
+        "name": "Trường Đại học Đồng Tháp",
+        "address": "Đồng Tháp"
+      },
+      {
+        "name": "Trường Đại học Kiên Giang",
+        "address": "Kiên Giang"
+      },
+      {
+        "name": "Trường Đại học Nha Trang",
+        "address": "Khánh Hòa"
+      },
+      {
+        "name": "Trường Đại học Quy Nhơn",
+        "address": "Bình Định"
+      },
+      {
+        "name": "Trường Đại học Sư phạm Kỹ thuật Hưng Yên",
+        "address": "Hưng Yên"
+      },
+      {
+        "name": "Trường Đại học Tây Bắc",
+        "address": "Sơn La"
+      },
+      {
+        "name": "Trường Đại học Tây Nguyên",
+        "address": "Đắk Lắk"
+      },
+      {
+        "name": "Trường Đại học Việt Đức",
+        "address": "Bình Dương"
+      },
+      {
+        "name": "Trường Đại học Vinh",
+        "address": "Nghệ An"
+      },
+      {
+        "name": "Đại học Y Dược Thành phố Hồ Chí Minh",
+        "address": "TP.HCM"
+      },
+      {
+        "name": "Trường Đại học Y Dược Hải Phòng",
+        "address": "Hải Phòng"
+      },
+      {
+        "name": "Trường Đại học Y Dược Thái Bình",
+        "address": "Thái Bình"
+      },
+      {
+        "name": "Trường Đại học Y Dược Cần Thơ",
+        "address": "Cần Thơ"
+      },
+      {
+        "name": "Trường Đại học Điều dưỡng Nam Định",
+        "address": "Nam Định"
+      },
+      {
+        "name": "Trường Đại học Kỹ thuật Y tế Hải Dương",
+        "address": "Hải Dương"
+      },
+      {
+        "name": "Trường Đại học Kỹ thuật Y Dược Đà Nẵng",
+        "address": "Đà Nẵng"
+      },
+      {
+        "name": "Nhạc viện Thành phố Hồ Chí Minh",
+        "address": "TP.HCM"
+      },
+      {
+        "name": "Học viện Âm nhạc Huế",
+        "address": "Huế"
+      },
+      {
+        "name": "Trường Đại học Thể dục Thể thao Bắc Ninh",
+        "address": "Bắc Ninh"
+      },
+      {
+        "name": "Trường Đại học Thể dục Thể thao Đà Nẵng",
+        "address": "Đà Nẵng"
+      },
+      {
+        "name": "Trường Đại học Công nghiệp Thành phố Hồ Chí Minh",
+        "address": "TP.HCM"
+      },
+      {
+        "name": "Trường Đại học Công nghiệp Quảng Ninh",
+        "address": "Quảng Ninh"
+      },
+      {
+        "name": "Trường Đại học Công nghiệp Việt Trì",
+        "address": "Phú Thọ"
+      },
+      {
+        "name": "Trường Đại học Sao Đỏ",
+        "address": "Hải Dương"
+      },
+      {
+        "name": "Trường Đại học Giao thông vận tải Thành phố Hồ Chí Minh",
+        "address": "TP.HCM"
+      },
+      {
+        "name": "Trường Đại học Hàng hải Việt Nam",
+        "address": "Hải Phòng"
+      },
+      {
+        "name": "Trường Đại học Kiến trúc Thành phố Hồ Chí Minh",
+        "address": "TP.HCM"
+      },
+      {
+        "name": "Trường Đại học Xây dựng Miền Trung",
+        "address": "Phú Yên"
+      },
+      {
+        "name": "Trường Đại học Xây dựng Miền Tây",
+        "address": "Vĩnh Long"
+      },
+      {
+        "name": "Trường Đại học Sư phạm Kỹ thuật Nam Định",
+        "address": "Nam Định"
+      },
+      {
+        "name": "Trường Đại học Sư phạm Kỹ thuật Vinh",
+        "address": "Nghệ An"
+      },
+      {
+        "name": "Trường Đại học Sư phạm Kỹ thuật Vĩnh Long",
+        "address": "Vĩnh Long"
+      },
+      {
+        "name": "Trường Đại học Tài chính – Marketing",
+        "address": "TP.HCM"
+      },
+      {
+        "name": "Trường Đại học Tài chính – Kế toán",
+        "address": "Quảng Ngãi"
+      },
+      {
+        "name": "Trường Đại học Tài chính – Quản trị kinh doanh",
+        "address": "Hưng Yên"
+      },
+      {
+        "name": "Trường Đại học Tài nguyên và Môi trường Thành phố Hồ Chí Minh",
+        "address": "TP.HCM"
+      },
+      {
+        "name": "Trường Đại học Ngân hàng Thành phố Hồ Chí Minh",
+        "address": "TP.HCM"
+      },
+      {
+        "name": "Trường Đại học Tôn Đức Thắng",
+        "address": "TP.HCM"
+      },
+      {
+        "name": "Trường Đại học Khoa học và Công nghệ Hà Nội",
+        "address": "Hà Nội"
+      },
+      {
+        "name": "Học viện Báo chí và Tuyên truyền",
+        "address": "Học viện Chính trị Quốc gia Hồ Chí Minh"
+      },
+      {
+        "name": "Học viện Chính sách và Phát triển",
+        "address": "Bộ Kế hoạch và Đầu tư"
+      },
+      {
+        "name": "Học viện Ngoại giao",
+        "address": "Bộ Ngoại giao"
+      },
+      {
+        "name": "Học viện Hành chính và Quản trị công",
+        "address": "Học viện Chính trị Quốc gia Hồ Chí Minh"
+      },
+      {
+        "name": "Học viện Công nghệ Bưu chính Viễn thông",
+        "address": "Bộ Thông tin và Truyền thông"
+      },
+      {
+        "name": "Trường Đại học Luật Hà Nội",
+        "address": "Bộ Tư pháp"
+      },
+      {
+        "name": "Trường Đại học Công nghiệp Dệt may Hà Nội",
+        "address": "Tập đoàn Dệt May Việt Nam"
+      },
+      {
+        "name": "Học viện Tòa án",
+        "address": "Tòa án nhân dân tối cao"
+      },
+      {
+        "name": "Học viện Thanh thiếu niên Việt Nam",
+        "address": "Ban Chấp hành Trung ương Đoàn Thanh niên Cộng sản Hồ Chí Minh"
+      },
+      {
+        "name": "Học viện Phụ nữ Việt Nam",
+        "address": "Hội Liên hiệp Phụ nữ Việt Nam"
+      },
+      {
+        "name": "Học viện Dân tộc",
+        "address": "Ủy ban Dân tộc"
+      },
+      {
+        "name": "Học viện Khoa học Xã hội",
+        "address": "Viện Hàn lâm Khoa học xã hội Việt Nam"
+      },
+      {
+        "name": "Trường Đại học Kiểm sát Hà Nội",
+        "address": "Viện Kiểm sát nhân dân tối cao"
+      },
+      {
+        "name": "Trường Đại học Dầu khí Việt Nam",
+        "address": "Tập đoàn Dầu khí Việt Nam"
+      },
+      {
+        "name": "Học viện Phật giáo Việt Nam tại Thành phố Hồ Chí Minh",
+        "address": "TP.HCM"
+      },
+      {
+        "name": "Học viện Phật giáo Việt Nam tại Huế",
+        "address": "Huế"
+      },
+      {
+        "name": "Học viện Phật giáo Nam tông Khmer",
+        "address": "Cần Thơ"
+      },
+      {
+        "name": "Học viện Công giáo Việt Nam",
+        "address": "Hội đồng Giám mục Việt Nam"
+      },
+      {
+        "name": "Học viện Cán bộ Thành phố Hồ Chí Minh",
+        "address": "TP.HCM"
+      },
+      {
+        "name": "Trường Đại học Hải Phòng",
+        "address": "Hải Phòng"
+      },
+      {
+        "name": "Trường Đại học Kỹ thuật – Công nghệ Cần Thơ",
+        "address": "Cần Thơ"
+      },
+      {
+        "name": "Trường Đại học Bạc Liêu",
+        "address": "Bạc Liêu"
+      },
+      {
+        "name": "Trường Đại học Thủ Dầu Một",
+        "address": "Bình Dương"
+      },
+      {
+        "name": "Trường Đại học Đồng Nai",
+        "address": "Đồng Nai"
+      },
+      {
+        "name": "Trường Đại học Hà Tĩnh",
+        "address": "Hà Tĩnh"
+      },
+      {
+        "name": "Trường Đại học Khánh Hòa",
+        "address": "Khánh Hòa"
+      },
+      {
+        "name": "Trường Đại học Kinh tế Nghệ An",
+        "address": "Nghệ An"
+      },
+      {
+        "name": "Trường Đại học Hoa Lư",
+        "address": "Ninh Bình"
+      },
+      {
+        "name": "Trường Đại học Hùng Vương",
+        "address": "Phú Thọ"
+      },
+      {
+        "name": "Trường Đại học Phú Yên",
+        "address": "Phú Yên"
+      },
+      {
+        "name": "Trường Đại học Quảng Bình",
+        "address": "Quảng Bình"
+      },
+      {
+        "name": "Trường Đại học Quảng Nam",
+        "address": "Quảng Nam"
+      },
+      {
+        "name": "Trường Đại học Phạm Văn Đồng",
+        "address": "Quảng Ngãi"
+      },
+      {
+        "name": "Trường Đại học Hạ Long",
+        "address": "Quảng Ninh"
+      },
+      {
+        "name": "Trường Đại học Thái Bình",
+        "address": "Thái Bình"
+      },
+      {
+        "name": "Trường Đại học Hồng Đức",
+        "address": "Thanh Hóa"
+      },
+      {
+        "name": "Trường Đại học Tiền Giang",
+        "address": "Tiền Giang"
+      },
+      {
+        "name": "Trường Đại học Trà Vinh",
+        "address": "Trà Vinh"
+      },
+      {
+        "name": "Trường Đại học Tân Trào",
+        "address": "Tuyên Quang"
+      },
+      {
+        "name": "Trường Đại học Công nghệ Sài Gòn",
+        "address": "TP.HCM"
+      },
+      {
+        "name": "Trường Đại học Bà Rịa – Vũng Tàu",
+        "address": "Bà Rịa – Vũng Tàu"
+      },
+      {
+        "name": "Trường Đại học Bình Dương",
+        "address": "Bình Dương"
+      },
+      {
+        "name": "Trường Đại học Quang Trung",
+        "address": "Bình Định"
+      },
+      {
+        "name": "Trường Đại học Phan Thiết",
+        "address": "Bình Thuận"
+      },
+      {
+        "name": "Trường Đại học Nam Cần Thơ",
+        "address": "Cần Thơ"
+      },
+      {
+        "name": "Trường Đại học Đông Á",
+        "address": "Đà Nẵng"
+      },
+      {
+        "name": "Trường Đại học Công nghệ Đồng Nai",
+        "address": "Đồng Nai"
+      },
+      {
+        "name": "Trường Đại học Hà Hoa Tiên",
+        "address": "Hà Nam"
+      },
+      {
+        "name": "Trường Đại học Võ Trường Toản",
+        "address": "Hậu Giang"
+      },
+      {
+        "name": "Trường Đại học Chu Văn An",
+        "address": "Hưng Yên"
+      },
+      {
+        "name": "Trường Đại học Thái Bình Dương",
+        "address": "Khánh Hòa"
+      },
+      {
+        "name": "Trường Đại học Yersin Đà Lạt",
+        "address": "Lâm Đồng"
+      },
+      {
+        "name": "Trường Đại học Kinh tế Công nghiệp Long An",
+        "address": "Long An"
+      },
+      {
+        "name": "Trường Đại học Lương Thế Vinh",
+        "address": "Nam Định"
+      },
+      {
+        "name": "Trường Đại học Công nghệ Vạn Xuân",
+        "address": "Nghệ An"
+      },
+      {
+        "name": "Trường Đại học Phan Châu Trinh",
+        "address": "Quảng Nam"
+      },
+      {
+        "name": "Trường Đại học Phú Xuân",
+        "address": "Huế"
+      },
+      {
+        "name": "Trường Đại học Cửu Long",
+        "address": "Vĩnh Long"
+      },
+      {
+        "name": "Trường Đại học Quản lý và Công nghệ Hải Phòng",
+        "address": "Hải Phòng"
+      },
+      {
+        "name": "Hoa Kỳ",
+        "address": "Trường Đại học Fulbright Việt Nam"
+      },
+      {
+        "name": "Nhật Bản",
+        "address": "Trường Đại học Y khoa Tokyo Việt Nam"
+      },
+      {
+        "name": "Anh Quốc",
+        "address": "Trường Đại học Anh Quốc tại Việt Nam (British University Vietnam)"
+      },
+      {
+        "name": "Anh Quốc",
+        "address": "Trường Đại học Greenwich - FPT Việt Nam"
+      },
+      {
+        "name": "Lạng Sơn",
+        "address": "Trường Cao đẳng Y tế Lạng Sơn"
+      },
+      {
+        "name": "Phú Thọ",
+        "address": "Trường Cao đẳng Y tế Phú Thọ"
+      },
+      {
+        "name": "Quảng Ninh",
+        "address": "Trường Cao đẳng Y tế Quảng Ninh"
+      },
+      {
+        "name": "Sơn La",
+        "address": "Trường Cao đẳng Y tế Sơn La"
+      },
+      {
+        "name": "Thái Nguyên",
+        "address": "Trường Cao đẳng Y tế Thái Nguyên"
+      },
+      {
+        "name": "Đắk Lắk",
+        "address": "Trường Cao đẳng Y tế Đắk Lắk"
+      },
+      {
+        "name": "Lâm Đồng",
+        "address": "Trường Cao đẳng Y tế Lâm Đồng"
+      },
+      {
+        "name": "Ninh Bình",
+        "address": "Trường Cao đẳng Y tế Ninh Bình"
+      },
+      {
+        "name": "Thái Bình",
+        "address": "Trường Cao đẳng Y tế Thái Bình"
+      },
+      {
+        "name": "Thanh Hóa",
+        "address": "Trường Cao đẳng Y – Dược Hợp Lực"
+      },
+      {
+        "name": "Hà Tĩnh",
+        "address": "Trường Cao đẳng Y tế Hà Tĩnh"
+      },
+      {
+        "name": "Quảng Trị",
+        "address": "Trường Cao đẳng Y tế Quảng Trị"
+      },
+      {
+        "name": "Thừa Thiên Huế",
+        "address": "Trường Cao đẳng Y tế Huế"
+      },
+      {
+        "name": "Quảng Bình",
+        "address": "Trường Cao đẳng Y tế Quảng Bình"
+      },
+      {
+        "name": "Thanh Hóa",
+        "address": "Trường Cao đẳng Y tế Thanh Hóa"
+      },
+      {
+        "name": "Bình Định",
+        "address": "Trường Cao đẳng Y tế Bình Định"
+      },
+      {
+        "name": "Quảng Ngãi",
+        "address": "Trường Cao đẳng Y tế Đặng Thùy Trâm"
+      },
+      {
+        "name": "Khánh Hòa",
+        "address": "Trường Cao đẳng Y tế Khánh Hòa"
+      },
+      {
+        "name": "Phú Yên",
+        "address": "Trường Cao đẳng Y tế Phú Yên"
+      },
+      {
+        "name": "Quảng Nam",
+        "address": "Trường Cao đẳng Y tế Quảng Nam"
+      },
+      {
+        "name": "Bình Dương",
+        "address": "Trường Cao đẳng Y tế Bình Dương"
+      },
+      {
+        "name": "Đồng Nai",
+        "address": "Trường Cao đẳng Y tế Đồng Nai"
+      },
+      {
+        "name": "Bạc Liêu",
+        "address": "Trường Cao đẳng Y tế Bạc Liêu"
+      },
+      {
+        "name": "Cà Mau",
+        "address": "Trường Cao đẳng Y tế Cà Mau"
+      },
+      {
+        "name": "Cần Thơ",
+        "address": "Trường Cao đẳng Y tế Cần Thơ"
+      },
+      {
+        "name": "Đồng Tháp",
+        "address": "Trường Cao đẳng Y tế Đồng Tháp"
+      },
+      {
+        "name": "Kiên Giang",
+        "address": "Trường Cao đẳng Y tế Kiên Giang"
+      },
+      {
+        "name": "Tiền Giang",
+        "address": "Trường Cao đẳng Y tế Tiền Giang"
+      },
+      {
+        "name": "Trà Vinh",
+        "address": "Trường Cao đẳng Y tế Trà Vinh"
+      },
+      {
+        "name": "Phú Thọ",
+        "address": "Trường Cao đẳng Công nghiệp Thực phẩm"
+      },
+      {
+        "name": "Quảng Ninh",
+        "address": "Trường Cao đẳng Công nghiệp và Xây dựng"
+      },
+      {
+        "name": "Thái Nguyên",
+        "address": "Trường Cao đẳng Công nghiệp Việt Đức"
+      },
+      {
+        "name": "Điện Biên",
+        "address": "Trường Cao đẳng Kinh tế Kỹ thuật Điện Biên"
+      },
+      {
+        "name": "Phú Thọ",
+        "address": "Trường Cao đẳng Kinh tế Kỹ thuật Phú Thọ"
+      },
+      {
+        "name": "Bắc Giang",
+        "address": "Trường Cao đẳng Kỹ thuật Công nghiệp"
+      },
+      {
+        "name": "Quảng Ninh",
+        "address": "Trường Cao đẳng Nông Lâm Đông Bắc"
+      },
+      {
+        "name": "Thái Nguyên",
+        "address": "Trường Cao đẳng Thương mại và Du lịch Thái Nguyên"
+      },
+      {
+        "name": "Quảng Ninh",
+        "address": "Trường Cao đẳng Văn hóa Nghệ thuật và Du lịch Hạ Long"
+      },
+      {
+        "name": "Hòa Bình",
+        "address": "Trường Cao đẳng Văn hóa Nghệ thuật Tây Bắc"
+      },
+      {
+        "name": "Thái Nguyên",
+        "address": "Trường Cao đẳng Văn hóa Nghệ thuật Việt Bắc"
+      },
+      {
+        "name": "Hà Nội",
+        "address": "Trường Cao đẳng Cộng đồng Hà Tây"
+      },
+      {
+        "name": "Hải Phòng",
+        "address": "Trường Cao đẳng Cộng đồng Hải Phòng"
+      },
+      {
+        "name": "Hà Nội",
+        "address": "Trường Cao đẳng Công nghệ và Kinh tế Hà Nội"
+      },
+      {
+        "name": "Hải Phòng",
+        "address": "Trường Cao đẳng Công nghệ Viettronics"
+      },
+      {
+        "name": "Hưng Yên",
+        "address": "Trường Cao đẳng Công nghiệp Hưng Yên"
+      },
+      {
+        "name": "Nam Định",
+        "address": "Trường Cao đẳng Công nghiệp Nam Định"
+      },
+      {
+        "name": "Vĩnh Phúc",
+        "address": "Trường Cao đẳng Công nghiệp và Thương mại"
+      },
+      {
+        "name": "Hà Nội",
+        "address": "Trường Cao đẳng Điện tử – Điện lạnh Hà Nội"
+      },
+      {
+        "name": "Hải Dương",
+        "address": "Trường Cao đẳng Dược Trung ương Hải Dương"
+      },
+      {
+        "name": "Hải Phòng",
+        "address": "Trường Cao đẳng Hàng hải I"
+      },
+      {
+        "name": "Hà Nội",
+        "address": "Trường Cao đẳng Kinh tế – Kỹ thuật Thương mại"
+      },
+      {
+        "name": "Vĩnh Phúc",
+        "address": "Trường Cao đẳng Kinh tế – Kỹ thuật Vĩnh Phúc"
+      },
+      {
+        "name": "Hà Nội",
+        "address": "Trường Cao đẳng Kinh tế Công nghiệp Hà Nội"
+      },
+      {
+        "name": "Hải Phòng",
+        "address": "Trường Cao đẳng Kinh tế và Công nghệ thực phẩm"
+      },
+      {
+        "name": "Bắc Ninh",
+        "address": "Trường Cao đẳng Kinh tế, Kỹ thuật và Thủy sản"
+      },
+      {
+        "name": "Hà Nội",
+        "address": "Trường Cao đẳng Múa Việt Nam"
+      },
+      {
+        "name": "Hà Nam",
+        "address": "Trường Cao đẳng Phát thanh - Truyền hình I"
+      },
+      {
+        "name": "Bắc Ninh",
+        "address": "Trường Cao đẳng Thống kê"
+      },
+      {
+        "name": "Hà Nội",
+        "address": "Trường Cao đẳng Thông tin và Truyền thông"
+      },
+      {
+        "name": "Hà Nam",
+        "address": "Trường Cao đẳng Thủy lợi Bắc Bộ"
+      },
+      {
+        "name": "Hà Nội",
+        "address": "Trường Cao đẳng Truyền hình"
+      },
+      {
+        "name": "Thái Bình",
+        "address": "Trường Cao đẳng Văn hóa Nghệ thuật Thái Bình"
+      },
+      {
+        "name": "Nam Định",
+        "address": "Trường Cao đẳng Văn hóa Nghệ thuật và Du lịch Nam Định"
+      },
+      {
+        "name": "Vĩnh Phúc",
+        "address": "Trường Cao đẳng Vĩnh Phúc"
+      },
+      {
+        "name": "Hà Nội",
+        "address": "Trường Cao đẳng Xây dựng công trình đô thị"
+      },
+      {
+        "name": "Nam Định",
+        "address": "Trường Cao đẳng Xây dựng Nam Định"
+      },
+      {
+        "name": "Hà Nội",
+        "address": "Trường Cao đẳng Xây dựng số 1"
+      },
+      {
+        "name": "Thừa Thiên Huế",
+        "address": "Trường Cao đẳng Công nghiệp Huế"
+      },
+      {
+        "name": "Nghệ An",
+        "address": "Trường Cao đẳng Giao thông vận tải Trung ương IV"
+      },
+      {
+        "name": "Quảng Bình",
+        "address": "Trường Cao đẳng Luật miền Trung"
+      },
+      {
+        "name": "Thanh Hóa",
+        "address": "Trường Cao đẳng Kinh tế Kỹ thuật Công thương"
+      },
+      {
+        "name": "Quảng Bình",
+        "address": "Trường Cao đẳng Kỹ thuật Công – Nông nghiệp Quảng Bình"
+      },
+      {
+        "name": "Thanh Hóa",
+        "address": "Trường Cao đẳng Nông nghiệp Thanh Hóa"
+      },
+      {
+        "name": "Hà Tĩnh",
+        "address": "Trường Cao đẳng Nguyễn Du"
+      },
+      {
+        "name": "Thanh Hóa",
+        "address": "Trường Cao đẳng Thể dục Thể thao Thanh Hóa"
+      },
+      {
+        "name": "Nghệ An",
+        "address": "Trường Cao đẳng Văn hóa Nghệ thuật Nghệ An"
+      },
+      {
+        "name": "Bình Thuận",
+        "address": "Trường Cao đẳng Bình Thuận"
+      },
+      {
+        "name": "Quảng Nam",
+        "address": "Trường Cao đẳng Công nghệ, Kinh tế và Thủy lợi miền Trung"
+      },
+      {
+        "name": "Phú Yên",
+        "address": "Trường Cao đẳng Công thương Miền Trung"
+      },
+      {
+        "name": "Quảng Nam",
+        "address": "Trường Cao đẳng Điện lực miền Trung"
+      },
+      {
+        "name": "Đà Nẵng",
+        "address": "Trường Cao đẳng Giao thông vận tải Trung ương V"
+      },
+      {
+        "name": "Bình Định",
+        "address": "Trường Cao đẳng Kỹ thuật Công nghệ Quy Nhơn"
+      },
+      {
+        "name": "Đà Nẵng",
+        "address": "Trường Cao đẳng Lương thực - Thực phẩm"
+      },
+      {
+        "name": "Quảng Nam",
+        "address": "Trường Cao đẳng Quảng Nam"
+      },
+      {
+        "name": "Đà Nẵng",
+        "address": "Trường Cao đẳng Thương mại"
+      },
+      {
+        "name": "Đắk Nông",
+        "address": "Trường Cao đẳng Cộng đồng Đắk Nông"
+      },
+      {
+        "name": "Lâm Đồng",
+        "address": "Trường Cao đẳng Công nghệ và Kinh tế Bảo Lộc"
+      },
+      {
+        "name": "Đắk Lắk",
+        "address": "Trường Cao đẳng Văn hóa Nghệ thuật Đắk Lắk"
+      },
+      {
+        "name": "Kon Tum",
+        "address": "Trường Cao đẳng Kon Tum"
+      },
+      {
+        "name": "Bình Phước",
+        "address": "Trường Cao đẳng Bình Phước"
+      },
+      {
+        "name": "TP. Hồ Chí Minh",
+        "address": "Trường Cao đẳng Bách khoa Nam Sài Gòn"
+      },
+      {
+        "name": "Bình Phước",
+        "address": "Trường Cao đẳng Công nghiệp Cao su"
+      },
+      {
+        "name": "TP. Hồ Chí Minh",
+        "address": "Trường Cao đẳng Công Thương Thành phố Hồ Chí Minh"
+      },
+      {
+        "name": "Bà Rịa – Vũng Tàu",
+        "address": "Trường Cao đẳng Kỹ thuật Công nghệ Bà Rịa – Vũng Tàu"
+      },
+      {
+        "name": "TP. Hồ Chí Minh",
+        "address": "Trường Cao đẳng Lý Tự Trọng Thành phố Hồ Chí Minh"
+      },
+      {
+        "name": "Đồng Nai",
+        "address": "Trường Cao đẳng Mỹ thuật trang trí Đồng Nai"
+      },
+      {
+        "name": "TP. Hồ Chí Minh",
+        "address": "Trường Cao đẳng Phát thanh Truyền hình II"
+      },
+      {
+        "name": "Đồng Nai",
+        "address": "Trường Cao đẳng Thống kê II"
+      },
+      {
+        "name": "TP. Hồ Chí Minh",
+        "address": "Trường Cao đẳng Văn hóa Nghệ thuật Thành phố Hồ Chí Minh"
+      },
+      {
+        "name": "Cần Thơ",
+        "address": "Trường Cao đẳng Cơ điện và Nông nghiệp Nam Bộ"
+      },
+      {
+        "name": "Đồng Tháp",
+        "address": "Trường Cao đẳng Cộng đồng Đồng Tháp"
+      },
+      {
+        "name": "Kiên Giang",
+        "address": "Trường Cao đẳng Kiên Giang"
+      },
+      {
+        "name": "Bạc Liêu",
+        "address": "Trường Cao đẳng Kinh tế – Kỹ thuật Bạc Liêu"
+      },
+      {
+        "name": "Cần Thơ",
+        "address": "Trường Cao đẳng Kinh tế – Kỹ thuật Cần Thơ"
+      },
+      {
+        "name": "Tiền Giang",
+        "address": "Trường Cao đẳng Nông nghiệp Nam Bộ"
+      },
+      {
+        "name": "Cần Thơ",
+        "address": "Trường Cao đẳng Văn hóa Nghệ thuật Cần Thơ"
+      },
+      {
+        "name": "Quảng Trị",
+        "address": "Trường Cao đẳng Kỹ thuật Quảng Trị"
+      }
+    ]
+  }

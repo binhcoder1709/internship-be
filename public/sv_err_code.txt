@@ -1,0 +1,188 @@
+# Mã lỗi chung
+
+# Lỗi đăng ký chung
+SV_ERR_REGISTRATION_FAILED     - Registration failed/Đăng ký thất bại
+SV_ERR_DUPLICATE_EMAIL         - Email already exists/Email đã tồn tại
+SV_ERR_DUPLICATE_PHONE         - Phone number already exists/Số điện thoại đã tồn tại
+SV_ERR_INVALID_INPUT          - Invalid input data/Dữ liệu đầu vào không hợp lệ
+
+# Lỗi xác thực Email
+SV_ERR_EMAIL_REQUIRED         - Email field is required/Email là trường bắt buộc
+SV_ERR_EMAIL_INVALID          - Invalid email format/Email không đúng định dạng
+SV_ERR_EMAIL_NOT_FOUND        - Email not found/Email không tồn tại
+SV_ERR_ALREADY_VERIFIED       - Email already verified/Email đã được xác thực
+SV_ERR_INVALID_OTP            - Invalid or expired OTP/Mã OTP không hợp lệ hoặc đã hết hạn
+SV_ERR_OTP_SEND_FAILED        - Failed to send OTP/Không thể gửi mã OTP
+SV_ERR_OTP_STORE_FAILED       - Failed to store OTP/Không thể lưu mã OTP
+SV_ERR_OTP_VERIFY_FAILED      - Failed to verify OTP/Không thể xác thực mã OTP
+
+# Lỗi xác thực số điện thoại
+SV_ERR_PHONE_REQUIRED         - Phone number is required/Số điện thoại là trường bắt buộc
+SV_ERR_PHONE_INVALID          - Invalid phone number format/Số điện thoại không hợp lệ
+
+# Lỗi xác thực mật khẩu
+SV_ERR_PASSWORD_REQUIRED      - Password is required/Mật khẩu là trường bắt buộc
+SV_ERR_PASSWORD_INVALID       - Invalid password format/Mật khẩu không hợp lệ
+SV_ERR_PASSWORD_MIN_LENGTH    - Password must be at least 3 characters/Mật khẩu phải có ít nhất 3 ký tự
+
+# Lỗi máy chủ
+SV_ERR_SERVER_ERROR           - Internal server error/Lỗi máy chủ
+SV_ERR_DATABASE_ERROR         - Database operation failed/Lỗi cơ sở dữ liệu
+SV_ERR_REDIS_CONNECTION       - Redis connection failed/Lỗi kết nối Redis
+SV_ERR_EMAIL_SEND_FAILED      - Failed to send email/Không thể gửi email
+
+# Lỗi đăng nhập và xác thực
+SV_ERR_INVALID_CREDENTIALS    - Invalid email or password/Email hoặc mật khẩu không chính xác
+SV_ERR_EMAIL_NOT_VERIFIED     - Email not verified/Email chưa được xác thực
+SV_ERR_ACCOUNT_INACTIVE       - Account is inactive/Tài khoản đã bị khóa
+SV_ERR_UNAUTHORIZED           - Unauthorized access/Không có quyền truy cập
+
+# Lỗi xác thực token
+SV_ERR_TOKEN_REQUIRED         - Token is required/Token là bắt buộc
+SV_ERR_TOKEN_INVALID          - Invalid token format/Token không đúng định dạng
+SV_ERR_TOKEN_EXPIRED          - Token has expired/Token đã hết hạn
+SV_ERR_TOKEN_BLACKLISTED      - Token has been blacklisted/Token đã bị vô hiệu hóa
+SV_ERR_TOKEN_NOT_FOUND        - Token not found in Redis/Token không tồn tại trong Redis
+
+# Lỗi không tìm thấy dữ liệu
+SV_ERR_NOT_FOUND             - Data not found/Không tìm thấy dữ liệu
+SV_ERR_USER_NOT_FOUND        - User not found/Không tìm thấy thông tin người dùng
+SV_ERR_STUDENT_NOT_FOUND     - Student not found/Không tìm thấy thông tin học sinh
+
+# Lỗi quản lý trường học
+SV_ERR_SCHOOL_NOT_FOUND      - School not found/Không tìm thấy thông tin trường học
+SV_ERR_SCHOOL_NAME_EXISTS    - School name already exists/Tên trường đã tồn tại
+SV_ERR_SCHOOL_CREATE_FAILED  - Failed to create school/Không thể tạo trường học
+SV_ERR_SCHOOL_UPDATE_FAILED  - Failed to update school/Không thể cập nhật trường học
+SV_ERR_SCHOOL_DELETE_FAILED  - Failed to delete school/Không thể xóa trường học
+
+# Lỗi quản lý học sinh
+SV_ERR_STUDENT_NOT_FOUND      - Student not found/Không tìm thấy thông tin học sinh
+SV_ERR_STUDENT_CREATE_FAILED  - Failed to create student/Không thể tạo học sinh
+SV_ERR_STUDENT_UPDATE_FAILED  - Failed to update student/Không thể cập nhật học sinh
+SV_ERR_STUDENT_DELETE_FAILED  - Failed to delete student/Không thể xóa học sinh
+SV_ERR_STUDENT_FETCH_FAILED   - Failed to fetch student/Không thể lấy thông tin học sinh
+SV_ERR_STUDENT_LIST_FAILED    - Failed to fetch student list/Không thể lấy danh sách học sinh
+SV_ERR_STUDENT_INACTIVE       - Student account is inactive/Tài khoản học sinh đã bị vô hiệu hóa
+SV_ERR_STUDENT_AVATAR_UPDATE_FAILED  - Failed to update student avatar/Không thể cập nhật avatar học sinh
+SV_ERR_STUDENT_AVATAR_DELETE_FAILED  - Failed to delete old avatar/Không thể xóa avatar cũ
+SV_ERR_STUDENT_AVATAR_SAVE_FAILED    - Failed to save avatar file/Không thể lưu file avatar
+SV_ERR_STUDENT_AVATAR_DIR_FAILED     - Failed to create avatar directory/Không thể tạo thư mục lưu avatar
+SV_ERR_STUDENT_AVATAR_SIZE           - Avatar file size too large/Kích thước file avatar quá lớn
+SV_ERR_STUDENT_AVATAR_TYPE           - Invalid avatar file type/Loại file avatar không hợp lệ
+SV_ERR_STUDENT_PROFILE_UPDATE_FAILED  - Failed to update student profile/Không thể cập nhật thông tin cá nhân
+SV_ERR_STUDENT_STATUS_UPDATE_FAILED  - Failed to update student status/Không thể cập nhật trạng thái học sinh
+
+# Lỗi quản lý vị trí thực tập
+SV_ERR_INTERNSHIP_POSITION_NOT_FOUND      - Internship position not found/Không tìm thấy thông tin vị trí thực tập
+SV_ERR_INTERNSHIP_POSITION_CREATE_FAILED  - Failed to create internship position/Không thể tạo vị trí thực tập
+SV_ERR_INTERNSHIP_POSITION_UPDATE_FAILED  - Failed to update internship position/Không thể cập nhật vị trí thực tập
+SV_ERR_INTERNSHIP_POSITION_DELETE_FAILED  - Failed to delete internship position/Không thể xóa vị trí thực tập
+SV_ERR_INTERNSHIP_POSITION_FETCH_FAILED   - Failed to fetch internship position/Không thể lấy thông tin vị trí thực tập
+SV_ERR_INTERNSHIP_POSITION_LIST_FAILED    - Failed to fetch internship position list/Không thể lấy danh sách vị trí thực tập
+
+# Lỗi quản lý yêu cầu vị trí thực tập
+SV_ERR_INTERNSHIP_POSITION_REQUIREMENT_EXISTS     - Requirement already exists/Yêu cầu bộ đề đã tồn tại
+SV_ERR_INTERNSHIP_POSITION_REQUIREMENT_NOT_FOUND  - Requirement not found/Không tìm thấy yêu cầu bộ đề
+SV_ERR_INTERNSHIP_POSITION_REQUIREMENT_ADD_FAILED - Failed to add requirement/Không thể thêm yêu cầu bộ đề
+SV_ERR_INTERNSHIP_POSITION_REQUIREMENT_REMOVE_FAILED - Failed to remove requirement/Không thể xóa yêu cầu bộ đề
+
+# Lỗi quản lý bộ đề
+SV_ERR_EXAM_SET_NOT_FOUND      - Exam set not found/Không tìm thấy thông tin bộ đề
+SV_ERR_EXAM_SET_CREATE_FAILED  - Failed to create exam set/Không thể tạo bộ đề
+SV_ERR_EXAM_SET_UPDATE_FAILED  - Failed to update exam set/Không thể cập nhật bộ đề
+SV_ERR_EXAM_SET_DELETE_FAILED  - Failed to delete exam set/Không thể xóa bộ đề
+SV_ERR_EXAM_SET_FETCH_FAILED   - Failed to fetch exam set/Không thể lấy thông tin bộ đề
+SV_ERR_EXAM_SET_LIST_FAILED    - Failed to fetch exam set list/Không thể lấy danh sách bộ đề
+
+# Lỗi quản lý câu hỏi
+SV_ERR_QUESTION_NOT_FOUND      - Question not found/Không tìm thấy thông tin câu hỏi
+SV_ERR_QUESTION_CREATE_FAILED  - Failed to create question/Không thể tạo câu hỏi
+SV_ERR_QUESTION_UPDATE_FAILED  - Failed to update question/Không thể cập nhật câu hỏi
+SV_ERR_QUESTION_DELETE_FAILED  - Failed to delete question/Không thể xóa câu hỏi
+SV_ERR_QUESTION_FETCH_FAILED   - Failed to fetch question/Không thể lấy thông tin câu hỏi
+SV_ERR_QUESTION_LIST_FAILED    - Failed to fetch question list/Không thể lấy danh sách câu hỏi
+SV_ERR_LANGUAGE_NOT_FOUND      - Programming language not found/Không tìm thấy ngôn ngữ lập trình
+SV_ERR_QUESTION_TYPE_INVALID   - Invalid question type/Loại câu hỏi không hợp lệ
+SV_ERR_QUESTION_FIELD_REQUIRED - Required field missing/Thiếu trường bắt buộc
+SV_ERR_QUESTION_FIELD_INVALID  - Invalid field value/Giá trị trường không hợp lệ
+SV_ERR_QUESTION_IN_USE         - Question is in use/Câu hỏi đang được sử dụng
+SV_ERR_QUESTION_DUPLICATE      - Duplicate question/Câu hỏi đã tồn tại
+
+# Lỗi quản lý câu hỏi trong bộ đề
+SV_ERR_QUESTION_IDS_REQUIRED    - Question IDs are required/Danh sách ID câu hỏi không được để trống
+SV_ERR_QUESTION_IDS_INVALID     - Invalid question IDs/Danh sách ID câu hỏi không hợp lệ
+SV_ERR_QUESTION_ID_INVALID      - Invalid question ID/ID câu hỏi không hợp lệ
+SV_ERR_EXAM_SET_QUESTION_NOT_FOUND - Question not found in exam set/Không tìm thấy câu hỏi trong bộ đề
+SV_ERR_EXAM_SET_QUESTIONS_ADD_FAILED - Failed to add questions to exam set/Không thể thêm câu hỏi vào bộ đề
+SV_ERR_EXAM_SET_QUESTION_REMOVE_FAILED - Failed to remove question from exam set/Không thể xóa câu hỏi khỏi bộ đề
+
+# Lỗi quản lý ngôn ngữ lập trình
+SV_ERR_LANGUAGE_LIST_FAILED    - Failed to fetch language list/Không thể lấy danh sách ngôn ngữ lập trình
+
+# Lỗi quản lý dự án thực tập
+SV_ERR_INTERNSHIP_PROJECT_NOT_FOUND      - Internship project not found/Không tìm thấy thông tin dự án thực tập
+SV_ERR_INTERNSHIP_PROJECT_CREATE_FAILED  - Failed to create internship project/Không thể tạo dự án thực tập
+SV_ERR_INTERNSHIP_PROJECT_UPDATE_FAILED  - Failed to update internship project/Không thể cập nhật dự án thực tập
+SV_ERR_INTERNSHIP_PROJECT_DELETE_FAILED  - Failed to delete internship project/Không thể xóa dự án thực tập
+SV_ERR_INTERNSHIP_PROJECT_FETCH_FAILED   - Failed to fetch internship project/Không thể lấy thông tin dự án thực tập
+SV_ERR_INTERNSHIP_PROJECT_LIST_FAILED    - Failed to fetch internship project list/Không thể lấy danh sách dự án thực tập
+
+# Lỗi làm bài thi
+SV_ERR_EXAM_ATTEMPT_NOT_FOUND   - Exam attempt not found/Không tìm thấy phiên thi
+SV_ERR_EXAM_ENDED               - Exam has ended/Phiên thi đã kết thúc
+SV_ERR_EXAM_NOT_STARTED         - Exam has not started/Phiên thi chưa bắt đầu
+SV_ERR_SUBMIT_FAILED            - Failed to submit answer/Không thể nộp câu trả lời
+SV_ERR_UNAUTHORIZED_ACCESS      - Unauthorized access to exam/Không có quyền truy cập phiên thi
+
+# Lỗi quản lý đơn apply thực tập
+SV_ERR_APPLICATION_NOT_FOUND      - Application not found/Không tìm thấy đơn apply
+SV_ERR_APPLICATION_CREATE_FAILED  - Failed to create application/Không thể tạo đơn apply
+SV_ERR_APPLICATION_EXISTS         - Application already exists/Đơn apply đã tồn tại
+SV_ERR_APPLICATION_LIST_FAILED    - Failed to fetch application list/Không thể lấy danh sách đơn apply
+SV_ERR_UPDATE_PROGRESS_FAILED     - Failed to update application progress/Có lỗi xảy ra khi cập nhật tiến độ
+SV_ERR_ALREADY_FINAL_PROGRESS    - Application is in final progress/Đơn apply đã ở trạng thái cuối cùng
+SV_ERR_REJECT_APPLICATION_FAILED  - Failed to reject application/Có lỗi xảy ra khi từ chối đơn apply
+SV_ERR_UPDATE_INTERVIEW_FAILED    - Failed to update interview information/Có lỗi xảy ra khi cập nhật thông tin phỏng vấn
+SV_ERR_INVALID_STATUS_FOR_INTERVIEW - Invalid status for interview update/Chỉ có thể cập nhật thông tin phỏng vấn khi đơn ở trạng thái đã chấp nhận hoặc đã phỏng vấn
+SV_ERR_CANCEL_APPLICATION_FAILED  - Failed to cancel application/Có lỗi xảy ra khi hủy đơn apply
+SV_ERR_INVALID_STATUS_FOR_CANCEL - Invalid status for cancellation/Chỉ có thể hủy đơn khi đơn đang ở trạng thái chờ duyệt
+SV_ERR_GET_MY_APPLICATIONS_FAILED - Failed to fetch your applications/Không thể lấy danh sách đơn apply của bạn
+
+# Lỗi quản lý nhóm thực tập
+SV_ERR_GROUP_NOT_FOUND      - Group not found/Không tìm thấy nhóm thực tập
+SV_ERR_GROUP_NAME_EXISTS    - Group name already exists/Tên nhóm đã tồn tại
+SV_ERR_GROUP_CREATE_FAILED  - Failed to create group/Không thể tạo nhóm thực tập
+SV_ERR_GROUP_UPDATE_FAILED  - Failed to update group/Không thể cập nhật nhóm thực tập
+SV_ERR_GROUP_LIST_FAILED    - Failed to fetch group list/Không thể lấy danh sách nhóm thực tập
+
+# Lỗi quản lý moderator nhóm thực tập
+SV_ERR_NOT_GROUP_OWNER         - Not group owner/Bạn không phải là owner của nhóm
+SV_ERR_MODERATOR_EXISTS        - Moderator already exists/Người này đã là moderator của nhóm
+SV_ERR_MODERATOR_NOT_FOUND     - Moderator not found/Không tìm thấy moderator này trong nhóm
+SV_ERR_ADD_MODERATOR_FAILED    - Failed to add moderator/Không thể thêm moderator
+SV_ERR_REMOVE_MODERATOR_FAILED - Failed to remove moderator/Không thể xóa moderator
+
+# Lỗi quản lý student trong nhóm thực tập
+SV_ERR_STUDENT_EXISTS_IN_GROUP         - Student already in group/Sinh viên này đã có trong nhóm
+SV_ERR_STUDENT_NOT_FOUND_IN_GROUP     - Student not found in group/Không tìm thấy sinh viên này trong nhóm
+SV_ERR_ADD_STUDENT_TO_GROUP_FAILED    - Failed to add student to group/Không thể thêm sinh viên vào nhóm
+SV_ERR_REMOVE_STUDENT_FROM_GROUP_FAILED - Failed to remove student from group/Không thể xóa sinh viên khỏi nhóm
+
+# Lỗi quản lý nhóm thực tập
+SV_ERR_GET_GROUP_DETAILS_FAILED - Failed to get group details/Không thể lấy thông tin chi tiết nhóm
+
+# Lỗi quản lý danh sách
+SV_ERR_GET_USER_LIST_FAILED    - Failed to get user list/Không thể lấy danh sách user
+SV_ERR_GET_STUDENT_LIST_FAILED - Failed to get student list/Không thể lấy danh sách student
+
+# Lỗi quản lý nhóm thực tập
+SV_ERR_NOT_GROUP_STUDENT - Not a group student/Bạn không phải là thành viên của nhóm này
+
+# Lỗi phân quyền nhóm thực tập
+SV_ERR_NOT_GROUP_PERMISSION - No permission/Bạn không có quyền thực hiện hành động này
+
+# Lỗi gán project
+SV_ERR_GROUP_ALREADY_STARTED     - Group already started project/Không thể thay đổi project khi nhóm đã bắt đầu
+SV_ERR_PROJECT_NOT_FOUND         - Project not found/Không tìm thấy project
+SV_ERR_SET_PROJECT_FAILED        - Failed to set project/Không thể gán project cho nhóm

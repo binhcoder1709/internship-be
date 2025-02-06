@@ -1,0 +1,503 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum StudentStatus {
+  INACTIVE
+  ACTIVE
+}
+
+enum AccountGender {
+  MALE
+  FEMALE
+  OTHER
+}
+
+model School {
+  id      Int     @id @default(autoincrement())
+  name    String  @unique
+  address String?
+
+  deletedAt       DateTime?
+  schoolAdminList SchoolAdmin[]
+  studentList     Student[]
+}
+
+enum SchoolAdminStatus {
+  ACTIVE
+  INACTIVE
+}
+
+model SchoolAdmin {
+  id       Int     @id @default(autoincrement())
+  school   School? @relation(fields: [schoolId], references: [id])
+  schoolId Int?
+  email    String  @unique
+  password String
+  fullName String?
+  phoneNumber String?
+  avatar String?
+  deletedAt DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  status SchoolAdminStatus @default(ACTIVE)
+}
+
+model Student {
+  id Int @id @default(autoincrement())
+
+  email       String @unique
+  phoneNumber String @unique
+  password    String // mật khẩu
+
+  verifyAt DateTime? // thời gian xác minh số điện thoại
+
+  status StudentStatus @default(ACTIVE)
+
+  createdAt DateTime? // thời gian hoàn tất xác minh
+
+  fullName String?
+  address  String?
+  bio      String? @db.Text
+
+  gender AccountGender @default(OTHER)
+
+  avatar   String? // ảnh đại diện
+  birthday DateTime? // Thêm trường birthday
+
+  school   School? @relation(fields: [schoolId], references: [id])
+  schoolId Int?
+
+  internshipApplicationList InternshipApplication[]
+
+  examAttempts           ExamAttempt[]
+  internshipGroupStudent InternshipGroupStudent[]
+  internshipGroupTask    InternshipGroupTask[]
+  interviewTrainingTask  InterviewTrainingTask[]
+}
+
+model LanguageProgramming {
+  id           Int        @id @default(autoincrement())
+  name         String     @unique
+  templateTest String?    @db.Text
+  deletedAt    DateTime?
+  questions    Question[]
+}
+
+model InternshipPosition {
+  id                                Int                             @id @default(autoincrement())
+  name                              String
+  description                       String?                         @db.Text
+  deletedAt                         DateTime?
+  internshipPositionRequirementList InternshipPositionRequirement[]
+  internshipApplication             InternshipApplication[]
+}
+
+enum ExamSetType {
+  FREE // Tự do làm lại nhiều lần
+  ONE_TIME // Chỉ được làm 1 lần duy nhất
+  INTERVIEW_TRAINING // Bài thi luyện tập
+}
+
+model ExamSet {
+  id            Int         @id @default(autoincrement())
+  title         String
+  description   String?     @db.Text
+  timeLimit     Int         @default(20) // minutes
+  questionCount Int         @default(0)
+  type          ExamSetType @default(ONE_TIME)
+
+  questions ExamSetQuestion[]
+  attempts  ExamAttempt[]
+
+  createdAt DateTime  @default(now())
+  deletedAt DateTime?
+
+  internshipPositionRequirementList InternshipPositionRequirement[]
+  interviewTrainingTask             InterviewTrainingTask[]
+}
+
+model InternshipPositionRequirement {
+  id                    Int                @id @default(autoincrement())
+  internshipPositionId  Int
+  internshipPosition    InternshipPosition @relation(fields: [internshipPositionId], references: [id])
+  examSetId             Int
+  examSet               ExamSet            @relation(fields: [examSetId], references: [id])
+  minimumCompletionRate Int
+
+  @@unique([internshipPositionId, examSetId])
+}
+
+enum QuestionType {
+  MULTIPLE_CHOICE
+  CODING
+  FILL_IN_THE_BLANK
+  ESSAY
+}
+
+// Câu hỏi
+model Question {
+  id Int @id @default(autoincrement())
+
+  type QuestionType @default(CODING)
+
+  language   LanguageProgramming? @relation(fields: [languageId], references: [id])
+  languageId Int?
+
+  questionText String // multiple choice, coding, fill in the blank, essay
+
+  // MULTIPLE_CHOICE
+  // questionText ex: "Javascript va java la cung 1 ngon ngu lap trinh phat trien ra dung khong, lua dap an phu hop nhat?"
+  choiceList         String? // "dap an 1, dap an 2, dap an 3, dap an 4, dap an 5..."
+  choiceCorrectIndex Int?
+
+  // CODING
+  // questionText ex: "Thuc hien bai toan cong 2 so voi javascript ?"
+  codingInitCode     String? @db.Text
+  codingTestTemplate String? @db.Text
+  codingTestCases    String? @db.Text
+
+  codingPerformanceCheck Boolean @default(false)
+  codingTimeLimit        Int?    @default(2000)
+  codingMemoryLimit      Int?    @default(128000)
+
+  // FILL_IN_THE_BLANK
+  // questionText ex: "ngay sinh cua nguyen phuoc vao {blank} va o {blank}"
+  fillAswer         String? // "tra loi 1, tra loi 2, tra loi 3"
+  fillCaseSensitive Boolean @default(false) // false: khong phan biet hoa thuong / true =? 
+
+  // ESSAY
+  // just have questionText
+
+  deletedAt   DateTime?
+  createdAt   DateTime             @default(now())
+  examSets    ExamSetQuestion[]
+  submissions QuestionSubmission[]
+}
+
+// Bảng trung gian liên kết Bộ đề - Câu hỏi
+model ExamSetQuestion {
+  examSet   ExamSet @relation(fields: [examSetId], references: [id])
+  examSetId Int
+
+  question   Question @relation(fields: [questionId], references: [id])
+  questionId Int
+
+  order Int?
+
+  @@id([examSetId, questionId])
+}
+
+model ExamAttempt {
+  id Int @id @default(autoincrement())
+
+  studnet   Student @relation(fields: [studentId], references: [id])
+  studentId Int
+
+  examSet   ExamSet @relation(fields: [examSetId], references: [id])
+  examSetId Int
+
+  startTime DateTime  @default(now())
+  endTime   DateTime?
+
+  note String?
+
+  completionRate Float?
+
+  orderQuestionList String? @db.Text
+
+  submissions           QuestionSubmission[]
+  interviewTrainingTask InterviewTrainingTask[]
+}
+
+model QuestionSubmission {
+  id Int @id @default(autoincrement())
+
+  examAttempt ExamAttempt @relation(fields: [attemptId], references: [id])
+  attemptId   Int
+
+  question   Question @relation(fields: [questionId], references: [id])
+  questionId Int
+
+  answer String  @db.Text
+  result String? @db.Text
+
+  isCorrect Boolean @default(false)
+
+  submittedAt DateTime @default(now())
+}
+
+enum UserRole {
+  MASTER
+  MODERATOR
+  LECTURE
+  BUSINESS
+}
+
+enum UserStatus {
+  ACTIVE
+  INACTIVE
+}
+
+model User {
+  id       Int      @id @default(autoincrement())
+  email    String   @unique
+  password String
+  fullName String?
+  role     UserRole
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  status                    UserStatus                  @default(ACTIVE)
+  internshipGroupMonderator InternshipGroupMonderator[]
+  internshipGroup           InternshipGroup[]
+}
+
+enum InternshipApplicationProgress {
+  WAITING
+  ACCEPTED
+  INTERVIEW_WAIT_STUDENT_RESPONSE
+  INTERVIEWED
+  GROUPED
+}
+
+enum InternshipApplicationType {
+  PART_TIME
+  FULL_TIME
+}
+
+enum InternshipApplicationInterviewResult {
+  NOT_INTERVIEWED
+  PASS
+  FAIL
+}
+
+model InternshipApplication {
+  id                   Int                @id @default(autoincrement())
+  studentId            Int
+  student              Student            @relation(fields: [studentId], references: [id])
+  internshipPositionId Int
+  internshipPosition   InternshipPosition @relation(fields: [internshipPositionId], references: [id])
+
+  address String?
+  type    InternshipApplicationType @default(FULL_TIME)
+
+  progress InternshipApplicationProgress @default(WAITING)
+
+  cancelAt     DateTime? // student
+  cancelReason String? // student
+
+  rejectAt     DateTime?
+  rejectReason String?
+
+  createAt      DateTime  @default(now()) //WAITING
+  acceptedAt    DateTime? //ACCEPTED
+  interviewedAt DateTime? //INTERVIEWED
+  groupedAt     DateTime? //GROUPED
+
+  interviewStudentResponseAt DateTime?
+  interviewStudentResponseNote String?
+  interviewStudentResponseResult Boolean?
+
+  internshipGroupId Int?
+  internshipGroup   InternshipGroup? @relation(fields: [internshipGroupId], references: [id])
+
+  interviewLink   String?
+  interviewTime   DateTime?
+  interviewNote   String?
+
+  interviewResult InternshipApplicationInterviewResult @default(NOT_INTERVIEWED)
+  interviewResultNote String?
+
+  @@unique([studentId, internshipPositionId])
+}
+
+model InternshipProject {
+  id          Int     @id @default(autoincrement())
+  name        String
+  description String? @db.Text
+  duration    Int
+
+  srsTemplateUrl      String? // Link SRS template (PDF/Google Docs)
+  taskListUrl         String? // Link task list (Google Sheets)
+  uiDesignUrl         String? // Link thiết kế UI (Figma)
+  databaseDesignUrl   String? // Link thiết kế DB (Google Drive/OneDrive)
+  projectStructureUrl String? // Link gitlab groups
+  projectPlanUrl      String? // Link kế hoạch phân công (Google Sheets)
+
+  memberCount Int @default(1) //Number of members required
+
+  deletedAt DateTime?
+
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  internshipGroup InternshipGroup[]
+}
+
+enum InternshipGroupProgress {
+  WAITING_FOR_MENTOR
+  WAITING_FOR_STUDENT
+  WAITING_FOR_PROJECT
+  START_PROJECT
+  FINISH_PROJECT
+}
+
+model InternshipGroup {
+  id          Int     @id @default(autoincrement())
+  name        String  @unique
+  description String? @db.Text
+
+  createAt DateTime  @default(now())
+  startAt  DateTime?
+  finishAt DateTime?
+
+  internshipGroupMonderator InternshipGroupMonderator[] // mentor
+  internshipGroupStudent    InternshipGroupStudent[] // student
+
+  internshipProjectId Int?
+  internshipProject   InternshipProject? @relation(fields: [internshipProjectId], references: [id])
+
+  ownerId Int
+  owner   User @relation(fields: [ownerId], references: [id])
+
+  progress              InternshipGroupProgress @default(WAITING_FOR_MENTOR)
+  internshipGroupTask   InternshipGroupTask[]
+  internshipApplication InternshipApplication[]
+}
+
+model InternshipGroupMonderator {
+  id                Int             @id @default(autoincrement())
+  userId            Int
+  user              User            @relation(fields: [userId], references: [id])
+  internshipGroupId Int
+  internshipGroup   InternshipGroup @relation(fields: [internshipGroupId], references: [id])
+  createdAt         DateTime        @default(now())
+}
+
+enum InternshipGroupStudentResult {
+  WAITING // chờ xử lý
+  UNFINISHED // không hoàn thành
+  DONE_AVERAGE // trung bình
+  DONE_ABOVE_AVERAGE // khá 
+  DONE_PROFICIENT // giỏi
+  DONE_EXCELLENT // xuất sắc
+}
+
+enum InternshipGroupStudentRegulation {
+  VIOLATE // vi phạm
+  HOURS_WORKED // làm việc trễ
+  TASK_LATE // làm task quá muộn
+  QUIZ_LATE // làm bài thi quá muộn
+  ESSAY_LATE // làm bài tập quá muộn
+}
+
+model InternshipGroupStudent {
+  id                Int             @id @default(autoincrement())
+  studentId         Int
+  student           Student         @relation(fields: [studentId], references: [id])
+  internshipGroupId Int
+  internshipGroup   InternshipGroup @relation(fields: [internshipGroupId], references: [id])
+
+  internshipResult  InternshipGroupStudentResult @default(WAITING)
+  internshipRegulation String @default("[]") @db.VarChar(255)
+  internshipNote String? @db.Text
+
+  internshipResultEvaluateBy String? @default("chưa có đánh giá")
+
+  createdAt DateTime @default(now())
+
+  @@unique([studentId, internshipGroupId])
+}
+
+enum InternshipGroupTaskProgess {
+  WAITING // chờ xử lý
+  UNFINISHED // không hoàn thành
+  DONE_AVERAGE // trung bình
+  DONE_ABOVE_AVERAGE // khá 
+  DONE_PROFICIENT // giỏi
+  DONE_EXCELLENT // xuất sắc
+}
+
+//enum Internship regulations
+
+enum internshipRegulations {
+  VIOLATE // vi phạm
+  HOURS_WORKED // làm việc trễ
+  TASK_LATE // làm task quá muộn
+  QUIZ_LATE // làm bài thi quá muộn
+  ESSAY_LATE // làm bài tập quá muộn
+}
+
+model InternshipGroupTask {
+  id        Int     @id @default(autoincrement())
+  studentId Int
+  student   Student @relation(fields: [studentId], references: [id])
+
+  internshipGroupId Int
+  internshipGroup   InternshipGroup @relation(fields: [internshipGroupId], references: [id])
+
+  createAt DateTime @default(now()) // thoi gian tao task
+
+  startDate  DateTime? // thoi gian bat dau lam task
+  finishDate DateTime? // thoi gian ket thuc lam task
+
+  progress      InternshipGroupTaskProgess @default(WAITING)
+  regulations   String                     @default("[]") @db.VarChar(255) // JSON array string
+  mentorCommand String?                    @db.Text
+
+  taskName              String?                 @db.Text
+  taskDetailMorning     String?                 @db.Text
+  taskDetailAfternoon   String?                 @db.Text
+  interviewTrainingTask InterviewTrainingTask[]
+}
+
+enum InterviewTrainingTaskStatus {
+  FINISHED
+  UNFINISHED
+}
+
+enum InterviewTrainingTaskType {
+  MORNING_QUIZZ
+  AFTERNOON_CODING
+  NIGHT_ESSAY
+}
+
+model InterviewTrainingTask {
+  id Int @id @default(autoincrement())
+
+  studentId Int
+  student   Student @relation(fields: [studentId], references: [id])
+
+  internshipGroupTaskId Int
+  internshipGroupTask   InternshipGroupTask @relation(fields: [internshipGroupTaskId], references: [id])
+
+  status InterviewTrainingTaskStatus @default(UNFINISHED)
+  type   InterviewTrainingTaskType
+
+  examSetId Int // bộ đề liên kết
+  examSet   ExamSet @relation(fields: [examSetId], references: [id])
+
+  examAttemptId Int? // bài làm liên kết
+  examAttempt   ExamAttempt? @relation(fields: [examAttemptId], references: [id])
+
+  isLate Boolean @default(false)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  lectureComment String? @db.Text
+
+  @@unique([studentId, internshipGroupTaskId, type])
+}
+
+/**
+ * Sáng: xây ui
+ * Chiều: viết api + tích hợp
+ */

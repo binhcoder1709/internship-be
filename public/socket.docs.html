@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket.IO Documentation - Exam System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-4xl font-bold mb-8">Socket.IO Documentation - Exam System</h1>
+
+        <!-- Connection -->
+        <section class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Connection</h2>
+            <div class="bg-gray-50 p-4 rounded-lg">
+                <pre class="text-sm">
+const socket = io('http://your-server:3000', {
+    auth: {
+        token: 'your-jwt-token'
+    }
+});
+                </pre>
+            </div>
+        </section>
+
+        <!-- Events -->
+        <section class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Events</h2>
+
+            <!-- Join Exam -->
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">1. Join Exam Attempt</h3>
+                <p class="mb-2">Emit event to join an exam attempt:</p>
+                <div class="bg-gray-50 p-4 rounded-lg mb-2">
+                    <pre class="text-sm">
+socket.emit('joinExamAttempt', attemptId);
+                    </pre>
+                </div>
+                <p class="mb-2">Response events:</p>
+                <ul class="list-disc list-inside mb-2">
+                    <li><code>examAttemptState</code> - Initial exam state</li>
+                    <li><code>error</code> - If join fails</li>
+                </ul>
+                <p class="text-sm text-gray-600">Example response data:</p>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <pre class="text-sm">
+{
+    questions: [{
+        id: number,
+        type: string,
+        questionText: string,
+        choiceList?: string,
+        codingInitCode?: string,
+        languageId?: number
+    }],
+    orderQuestionList: string,
+    submissions: [{
+        questionId: number,
+        answer: string,
+        submittedAt: Date,
+        result: string,
+        isCorrect: boolean
+    }],
+    timeRemaining: number
+}
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Submit Answer -->
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">2. Submit Answer</h3>
+                <p class="mb-2">Emit event to submit an answer:</p>
+                <div class="bg-gray-50 p-4 rounded-lg mb-2">
+                    <pre class="text-sm">
+socket.emit('submitAnswer', {
+    attemptId: number,
+    questionId: number,
+    answer: string
+});
+                    </pre>
+                </div>
+                <p class="mb-2">Response events:</p>
+                <ul class="list-disc list-inside mb-2">
+                    <li><code>answerResult</code> - Immediate result for the submitted answer</li>
+                    <li><code>examAttemptState</code> - Updated exam state</li>
+                    <li><code>error</code> - If submission fails</li>
+                </ul>
+                <p class="text-sm text-gray-600">Example answer result data:</p>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <pre class="text-sm">
+{
+    totalCases?: number,
+    passedCases?: number,
+    isCorrect: boolean,
+    testCases?: [{
+        caseNumber: number,
+        input: string,
+        expected: string,
+        output: string,
+        time: number,
+        memory: number,
+        passed: boolean
+    }],
+    message?: string,
+    result?: string
+}
+                    </pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Error Handling -->
+        <section class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Error Handling</h2>
+            <p class="mb-2">Listen for error events:</p>
+            <div class="bg-gray-50 p-4 rounded-lg mb-4">
+                <pre class="text-sm">
+socket.on('error', (error) => {
+    console.error('Socket error:', error);
+    // error.message - Array of error codes
+    // error.description - Error description
+});
+                    </pre>
+            </div>
+            <p class="mb-2">Common error codes:</p>
+            <ul class="list-disc list-inside">
+                <li>SV_ERR_EXAM_ATTEMPT_NOT_FOUND</li>
+                <li>SV_ERR_EXAM_ENDED</li>
+                <li>SV_ERR_EXAM_NOT_STARTED</li>
+                <li>SV_ERR_SUBMIT_FAILED</li>
+                <li>SV_ERR_UNAUTHORIZED_ACCESS</li>
+            </ul>
+        </section>
+
+        <!-- Example Usage -->
+        <section class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-semibold mb-4">Example Usage</h2>
+            <div class="bg-gray-50 p-4 rounded-lg">
+                <pre class="text-sm">
+const socket = io('http://your-server:3000', {
+    auth: { token: 'your-jwt-token' }
+});
+
+// Handle connection
+socket.on('connect', () => {
+    console.log('Connected to server');
+});
+
+// Join exam attempt
+socket.emit('joinExamAttempt', 123);
+
+// Handle exam state updates
+socket.on('examAttemptState', (state) => {
+    console.log('Exam state:', state);
+    // Update UI with new state
+});
+
+// Submit an answer
+socket.emit('submitAnswer', {
+    attemptId: 123,
+    questionId: 456,
+    answer: 'user answer here'
+});
+
+// Handle answer results
+socket.on('answerResult', (result) => {
+    console.log('Answer result:', result);
+    // Show result to user
+});
+
+// Handle errors
+socket.on('error', (error) => {
+    console.error('Error:', error);
+    // Show error message to user
+});
+                </pre>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+# Mã thông báo thành công chung
+
+# Thông báo đăng ký
+SV_NOTICE_REGISTER_SUCCESS    - Registration successful/Đăng ký thành công
+SV_NOTICE_REGISTER_EMAIL      - Registration email sent/Email đăng ký đã được gửi
+
+# Thông báo xác thực email
+SV_NOTICE_OTP_SENT           - OTP sent successfully/Mã OTP đã được gửi thành công
+SV_NOTICE_VERIFY_SUCCESS     - Email verification successful/Xác thực email thành công
+SV_NOTICE_VERIFY_EMAIL       - Email verified successfully/Email đã được xác thực thành công
+
+# Thông báo đăng nhập/đăng xuất
+SV_NOTICE_LOGIN_SUCCESS      - Login successful/Đăng nhập thành công
+SV_NOTICE_LOGOUT_SUCCESS     - Logout successful/Đăng xuất thành công
+
+# Thông báo xác thực token
+SV_NOTICE_TOKEN_VALID        - Token is valid/Token hợp lệ
+SV_NOTICE_TOKEN_STORED       - Token stored in Redis/Token đã được lưu trong Redis
+
+# Thông báo quản lý người dùng
+SV_NOTICE_USER_CREATED       - User created successfully/Tạo tài khoản thành công
+SV_NOTICE_USER_UPDATED       - User updated successfully/Cập nhật thông tin thành công
+SV_NOTICE_PROFILE_UPDATED    - Profile updated successfully/Cập nhật thông tin cá nhân thành công
+SV_NOTICE_PROFILE_FETCHED    - Profile fetched successfully/Lấy thông tin cá nhân thành công
+
+# Thông báo quản lý trường học
+SV_NOTICE_SCHOOL_CREATED     - School created successfully/Tạo trường học thành công
+SV_NOTICE_SCHOOL_UPDATED     - School updated successfully/Cập nhật trường học thành công
+SV_NOTICE_SCHOOL_DELETED     - School deleted successfully/Xóa trường học thành công
+SV_NOTICE_SCHOOL_FETCHED     - School information fetched successfully/Lấy thông tin trường học thành công
+
+# Thông báo quản lý học sinh
+SV_NOTICE_STUDENT_CREATED     - Student created successfully/Tạo học sinh thành công
+SV_NOTICE_STUDENT_UPDATED     - Student updated successfully/Cập nhật học sinh thành công
+SV_NOTICE_STUDENT_DELETED     - Student deleted successfully/Xóa học sinh thành công
+SV_NOTICE_STUDENT_FETCHED     - Student information fetched successfully/Lấy thông tin học sinh thành công
+SV_NOTICE_STUDENT_LIST        - Student list fetched successfully/Lấy danh sách học sinh thành công
+SV_NOTICE_STUDENT_ACTIVATED   - Student account activated successfully/Kích hoạt tài khoản học sinh thành công
+SV_NOTICE_STUDENT_AVATAR_UPDATED   - Student avatar updated successfully/Cập nhật avatar học sinh thành công
+SV_NOTICE_STUDENT_PROFILE_UPDATED   - Student profile updated successfully/Cập nhật thông tin cá nhân thành công
+SV_NOTICE_STUDENT_STATUS_UPDATED   - Student status updated successfully/Cập nhật trạng thái học sinh thành công
+
+# Thông báo quản lý vị trí thực tập
+SV_NOTICE_INTERNSHIP_POSITION_CREATED     - Internship position created successfully/Tạo vị trí thực tập thành công
+SV_NOTICE_INTERNSHIP_POSITION_UPDATED     - Internship position updated successfully/Cập nhật vị trí thực tập thành công
+SV_NOTICE_INTERNSHIP_POSITION_DELETED     - Internship position deleted successfully/Xóa vị trí thực tập thành công
+SV_NOTICE_INTERNSHIP_POSITION_FETCHED     - Internship position fetched successfully/Lấy thông tin vị trí thực tập thành công
+SV_NOTICE_INTERNSHIP_POSITION_LIST        - Internship position list fetched successfully/Lấy danh sách vị trí thực tập thành công
+
+# Thông báo quản lý yêu cầu vị trí thực tập
+SV_NOTICE_INTERNSHIP_POSITION_REQUIREMENT_ADDED   - Requirement added successfully/Thêm yêu cầu bộ đề thành công
+SV_NOTICE_INTERNSHIP_POSITION_REQUIREMENT_REMOVED - Requirement removed successfully/Xóa yêu cầu bộ đề thành công
+
+# Thông báo quản lý bộ đề
+SV_NOTICE_EXAM_SET_CREATED     - Exam set created successfully/Tạo bộ đề thành công
+SV_NOTICE_EXAM_SET_UPDATED     - Exam set updated successfully/Cập nhật bộ đề thành công
+SV_NOTICE_EXAM_SET_DELETED     - Exam set deleted successfully/Xóa bộ đề thành công
+SV_NOTICE_EXAM_SET_FETCHED     - Exam set information fetched successfully/Lấy thông tin bộ đề thành công
+SV_NOTICE_EXAM_SET_LIST        - Exam set list fetched successfully/Lấy danh sách bộ đề thành công
+
+# Thông báo quản lý câu hỏi
+SV_NOTICE_QUESTION_CREATED     - Question created successfully/Tạo câu hỏi thành công
+SV_NOTICE_QUESTION_UPDATED     - Question updated successfully/Cập nhật câu hỏi thành công
+SV_NOTICE_QUESTION_DELETED     - Question deleted successfully/Xóa câu hỏi thành công
+SV_NOTICE_QUESTION_FETCHED     - Question information fetched successfully/Lấy thông tin câu hỏi thành công
+SV_NOTICE_QUESTION_LIST        - Question list fetched successfully/Lấy danh sách câu hỏi thành công
+SV_NOTICE_QUESTION_VALIDATED   - Question validated successfully/Kiểm tra câu hỏi thành công
+SV_NOTICE_QUESTION_IMPORTED    - Questions imported successfully/Import câu hỏi thành công
+SV_NOTICE_QUESTION_EXPORTED    - Questions exported successfully/Export câu hỏi thành công
+
+# Thông báo quản lý câu hỏi trong bộ đề
+SV_NOTICE_EXAM_SET_QUESTIONS_ADDED    - Questions added to exam set successfully/Thêm câu hỏi vào bộ đề thành công
+SV_NOTICE_EXAM_SET_QUESTION_REMOVED   - Question removed from exam set successfully/Xóa câu hỏi khỏi bộ đề thành công
+
+# Thông báo quản lý ngôn ngữ lập trình
+SV_NOTICE_LANGUAGE_LIST        - Language list fetched successfully/Lấy danh sách ngôn ngữ lập trình thành công
+
+# Thông báo quản lý dự án thực tập
+SV_NOTICE_INTERNSHIP_PROJECT_CREATED     - Internship project created successfully/Tạo dự án thực tập thành công
+SV_NOTICE_INTERNSHIP_PROJECT_UPDATED     - Internship project updated successfully/Cập nhật dự án thực tập thành công
+SV_NOTICE_INTERNSHIP_PROJECT_DELETED     - Internship project deleted successfully/Xóa dự án thực tập thành công
+SV_NOTICE_INTERNSHIP_PROJECT_FETCHED     - Internship project fetched successfully/Lấy thông tin dự án thực tập thành công
+SV_NOTICE_INTERNSHIP_PROJECT_LIST        - Internship project list fetched successfully/Lấy danh sách dự án thực tập thành công
+
+# Thông báo làm bài thi
+SV_NOTICE_EXAM_JOINED           - Successfully joined exam/Tham gia phiên thi thành công
+SV_NOTICE_ANSWER_SUBMITTED      - Answer submitted successfully/Nộp câu trả lời thành công
+SV_NOTICE_EXAM_STATE_UPDATED    - Exam state updated/Cập nhật trạng thái bài thi thành công
+
+# Thông báo quản lý đơn apply thực tập
+SV_NOTICE_APPLICATION_CREATED     - Application created successfully/Tạo đơn apply thành công
+SV_NOTICE_APPLICATION_LIST        - Application list fetched successfully/Lấy danh sách đơn apply thành công
+SV_NOTICE_APPLICATION_PROGRESS_UPDATED - Application progress updated successfully/Cập nhật tiến độ thành công
+SV_NOTICE_APPLICATION_REJECTED    - Application rejected successfully/Từ chối đơn apply thành công
+SV_NOTICE_INTERVIEW_UPDATED       - Interview information updated successfully/Cập nhật thông tin phỏng vấn thành công
+SV_NOTICE_APPLICATION_CANCELLED   - Application cancelled successfully/Hủy đơn apply thành công
+SV_NOTICE_MY_APPLICATIONS_LIST    - Your applications fetched successfully/Lấy danh sách đơn apply của bạn thành công
+
+# Thông báo quản lý nhóm thực tập
+SV_NOTICE_GROUP_CREATED     - Group created successfully/Tạo nhóm thực tập thành công
+SV_NOTICE_GROUP_UPDATED     - Group updated successfully/Cập nhật nhóm thực tập thành công
+SV_NOTICE_GROUP_LIST        - Group list fetched successfully/Lấy danh sách nhóm thực tập thành công
+SV_NOTICE_GROUP_DETAILS_FETCHED - Group details fetched successfully/Lấy thông tin chi tiết nhóm thành công
+
+# Thông báo quản lý moderator nhóm thực tập
+SV_NOTICE_MODERATOR_ADDED    - Moderator added successfully/Thêm moderator thành công
+SV_NOTICE_MODERATOR_REMOVED  - Moderator removed successfully/Xóa moderator thành công
+
+# Thông báo quản lý student trong nhóm thực tập
+SV_NOTICE_STUDENT_ADDED_TO_GROUP    - Student added to group successfully/Thêm sinh viên vào nhóm thành công
+SV_NOTICE_STUDENT_REMOVED_FROM_GROUP - Student removed from group successfully/Xóa sinh viên khỏi nhóm thành công
+
+# Thông báo quản lý danh sách
+SV_NOTICE_USER_LIST_FETCHED    - User list fetched successfully/Lấy danh sách user thành công
+SV_NOTICE_STUDENT_LIST_FETCHED - Student list fetched successfully/Lấy danh sách student thành công
+
+# Thông báo gán project
+SV_NOTICE_GROUP_PROJECT_SET      - Project set successfully/Gán project cho nhóm thành công
